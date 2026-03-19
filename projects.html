@@ -162,9 +162,21 @@ p.section-copy {
 }
 .slides { display:flex; transition: transform .32s ease; will-change: transform; }
 .slide {
-  min-width:100%; position:relative; aspect-ratio: 16 / 9.4; background:#e9e0d3;
+  min-width:100%;
+  position:relative;
+  aspect-ratio: 16 / 10;
+  background:#e9e0d3;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 10px;
 }
-.slide img { width:100%; height:100%; object-fit:cover; }
+.slide img {
+  width:100%;
+  height:100%;
+  object-fit: contain;
+  border-radius: 22px;
+}
 .slider-btn {
   position:absolute; top:50%; transform:translateY(-50%); width:62px; height:62px;
   border:none; border-radius:999px; display:flex; align-items:center; justify-content:center;
@@ -199,7 +211,7 @@ p.section-copy {
   .container { width: min(100%, calc(100% - 24px)); }
   .project-details, .about-layout { grid-template-columns: 1fr; }
   .areas-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
-  .slide { aspect-ratio: 4 / 5.1; }
+  .slide { aspect-ratio: 4 / 5.4; }
 }
 @media (max-width: 680px) {
   .navbar-inner { align-items:flex-start; flex-direction:column; }
@@ -215,7 +227,7 @@ p.section-copy {
   .slider-btn { width:50px; height:50px; font-size:30px; }
   .areas-grid { grid-template-columns: 1fr; }
   .area { font-size: 17px; }
-  .slide { aspect-ratio: 4 / 5.35; }
+  .slide { aspect-ratio: 4 / 5.6; }
   .project-copy, .about-card p, .contact-card p { font-size: 18px; }
 }
 </style></head>
