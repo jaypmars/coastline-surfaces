@@ -246,6 +246,63 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .desktop-nav-wrap { display:none; }
   .mobile-menu-toggle { display:flex; flex:0 0 auto; }
 }
+
+@media (min-width: 981px){
+  .review-home-inner{
+    max-width: 900px;
+  }
+  .review-home-panel{
+    padding: 34px 36px;
+  }
+  .review-home-panel .review-quote{
+    max-width: 820px;
+    font-size: 26px;
+    line-height: 1.55;
+  }
+  .cta-home-wrap{
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+  .cta-photo-card{
+    min-height: 360px;
+  }
+  .cta-photo-card img{
+    object-fit: cover !important;
+    object-position: right center !important;
+  }
+  .cta-photo-overlay{
+    padding: 34px 36px;
+    background: linear-gradient(90deg, rgba(17,14,12,.68) 0%, rgba(17,14,12,.44) 36%, rgba(17,14,12,.10) 100%) !important;
+  }
+  .cta-photo-content{
+    max-width: 470px;
+  }
+  .cta-photo-content h3{
+    font-size: 58px;
+    line-height: .95;
+    margin-bottom: 16px;
+  }
+  .cta-photo-content p{
+    font-size: 20px;
+    line-height: 1.55;
+    max-width: 430px;
+  }
+  .cta-photo-content .btn{
+    width: auto;
+    min-width: 220px;
+  }
+  .contact-card{
+    max-width: 1240px;
+    margin: 20px auto 0;
+    padding: 30px 28px;
+  }
+}
+
+
+.areas-bottom-wrap{margin-top:20px}
+@media (min-width: 981px){
+  .areas-bottom-wrap{max-width:1240px;margin:20px auto 0}
+}
 </style></head>
 <body>
 
@@ -327,7 +384,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   </header>
   <section class="section">
     <div class="container">
-      <div class="areas-card">
+      <div class="areas-card areas-bottom-wrap">
         <span class="panel-tag">Service areas</span>
         <h3 class="section-title">Where we work</h3>
         <p class="section-copy">Serving Southern California and available to travel for the right project.</p>
@@ -346,8 +403,8 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   
   
 <section class="section">
-  <div class="container">
-    <div class="panel">
+  <div class="container review-home-inner">
+    <div class="panel review-home-panel">
       <span class="panel-tag">Client review</span>
       <h3 class="section-title">What clients are saying</h3>
       <p class="review-quote">“His lines are incredibly precise, and the finished work looks completely professional… We’d hire him again without hesitation.”</p>
