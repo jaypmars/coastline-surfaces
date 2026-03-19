@@ -170,9 +170,9 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .slide { height:min(70vh, 700px); }
 }
 
-.cta-photo-card{position:relative;overflow:hidden;border-radius:30px;min-height:420px;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-strong);background:#d8d1c7}
-.cta-photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% center}
-.cta-photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,14,12,.72) 0%,rgba(17,14,12,.48) 44%,rgba(17,14,12,.18) 100%);display:flex;align-items:flex-start;justify-content:flex-start;padding:32px}
+.cta-photo-card{position:relative;overflow:hidden;border-radius:30px;min-height:460px;border:1px solid rgba(255,255,255,.12);box-shadow:var(--shadow-strong);background:#cfc7bb}
+.cta-photo-card img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:right center;background:#cfc7bb}
+.cta-photo-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(17,14,12,.72) 0%,rgba(17,14,12,.46) 38%,rgba(17,14,12,.08) 100%);display:flex;align-items:flex-start;justify-content:flex-start;padding:32px}
 .cta-photo-content{max-width:720px;color:#fff}.cta-photo-content h3{margin:0 0 16px;font-size:clamp(34px,4vw,64px);line-height:.95;letter-spacing:-.04em}.cta-photo-content p{margin:0 0 22px;font-size:clamp(19px,2vw,28px);line-height:1.5;color:rgba(255,255,255,.9)}
 .btn-tertiary{background:linear-gradient(180deg,#f8f2ea 0%,#efe5d8 100%);color:var(--accent-dark);border:1px solid var(--border)}
 .estimate-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:22px}.estimate-form-card{background:var(--card);border:1px solid var(--border);border-radius:34px;box-shadow:var(--shadow);padding:28px 22px}.estimate-form-card h2{margin:0 0 10px;font-size:clamp(32px,4vw,52px);line-height:.96;letter-spacing:-.04em}.estimate-form-card p,.form-side-card p{margin:0 0 20px;color:var(--muted);font-size:18px;line-height:1.7}
@@ -344,16 +344,21 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
     </div>
   </section>
   
-  <section class="section">
-    <div class="container">
-      <div class="panel">
-        <span class="panel-tag">Client review</span>
-        <h3 class="section-title">What clients are saying</h3>
-        <p class="section-copy">“We hired Jay to paint two bedrooms and our stairwell, and we couldn’t be happier with the results. His lines are incredibly precise, and the finished work looks completely professional. He was easy to work with from start to finish, showed up when he said he would, and wrapped up the job on time. The pricing was fair and transparent with no surprises. We’d hire him again without hesitation and would recommend him to anyone looking for a painter who takes real pride in his work.”</p>
-        <p style="margin:14px 0 0;color:#5d4a3a;font-weight:700;">— Slava Yanson &amp; Nancy Coblenz</p>
+  
+<section class="section">
+  <div class="container">
+    <div class="panel">
+      <span class="panel-tag">Client review</span>
+      <h3 class="section-title">What clients are saying</h3>
+      <p class="review-quote">“His lines are incredibly precise, and the finished work looks completely professional… We’d hire him again without hesitation.”</p>
+      <p class="review-author">— Slava Yanson &amp; Nancy Coblenz</p>
+      <div style="margin-top:16px;">
+        <a class="btn btn-tertiary" href="reviews.html">View Full Review</a>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
 <section class="contact-wrap">
     <div class="container">
