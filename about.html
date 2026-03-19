@@ -35,10 +35,9 @@ button { font-family: inherit; }
 }
 .navbar-inner { display:flex; align-items:center; justify-content:space-between; gap:16px; padding:14px 0; }
 .brand { display:flex; align-items:center; gap:14px; min-width:0; }
-.brand-text { min-width:0; }
 .brand-logo { width:60px; height:60px; border-radius:18px; overflow:hidden; flex-shrink:0; background:#fff; border:1px solid var(--border); box-shadow: 0 8px 18px rgba(60,45,25,.06); }
 .brand-logo img { width:100%; height:100%; object-fit:cover; }
-.brand-text h1 { margin:0; font-size:22px; line-height:1.02; letter-spacing:.04em; font-weight:700; white-space:nowrap; }
+.brand-text h1 { margin:0; font-size:24px; line-height:1.05; letter-spacing:.04em; font-weight:700; white-space:nowrap; }
 .brand-text p { margin:6px 0 0; color:#8c7f74; font-size:13px; line-height:1.35; letter-spacing:0.04em; }
 
 .nav-right { display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
@@ -164,6 +163,23 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   background:rgba(255,255,255,.95); font-size:28px; line-height:1; cursor:pointer;
 }
 
+
+
+/* desktop polish */
+@media (min-width: 981px) {
+  .navbar-inner { padding: 16px 0; }
+  .brand { gap: 16px; }
+  .brand-text h1 { font-size: 28px; }
+  .hero-card, .panel, .about-card, .areas-card, .contact-card { border-radius: 36px; }
+  .hero-card { padding: 36px 40px 32px; }
+  .panel, .about-card, .areas-card, .contact-card { padding: 32px 28px; }
+  .hero p.lead, .section-copy, .contact-card p, .about-card p, .project-copy { max-width: 920px; }
+  .review-quote { max-width: 960px; margin-left: auto; margin-right: auto; }
+  .contact-wrap .panel, .contact-wrap .contact-card, .home-review-card, .home-areas-card { max-width: 1180px; margin-left: auto; margin-right: auto; }
+  .cta-photo-card { min-height: 560px; }
+  .cta-photo-card img { object-fit: contain; object-position: center center; padding: 20px; }
+}
+
 @media (max-width: 980px) {
   .container { width:min(100%, calc(100% - 24px)); }
   .project-details, .about-layout { grid-template-columns:1fr; }
@@ -185,7 +201,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .navbar-inner { align-items:flex-start; flex-direction:column; }
   .nav-right { width:100%; }
   .nav-tab, .insta-btn, .call-link { flex:1 1 auto; text-align:center; }
-  .brand-text h1 { font-size:17px; }
+  .brand-text h1 { font-size:20px; }
   .hero-card { padding:18px 14px 18px; border-radius:28px; }
   .hero-logo { width:64px; height:64px; }
   .hero h2 { font-size: clamp(28px, 9vw, 42px); }
@@ -225,7 +241,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 .mobile-brand-mini { display:flex; align-items:center; gap:12px; min-width:0; }
 .mobile-brand-mini .mini-logo { width:54px; height:54px; border-radius:16px; overflow:hidden; background:#fff; border:1px solid var(--border); }
 .mobile-brand-mini .mini-logo img { width:100%; height:100%; object-fit:cover; }
-.mobile-brand-mini strong { display:block; font-size:15px; line-height:1.05; letter-spacing:.04em; white-space:nowrap; }
+.mobile-brand-mini strong { display:block; font-size:16px; line-height:1.1; letter-spacing:.04em; white-space:nowrap; }
 
 .mobile-nav-list { display:grid; gap:14px; margin-top:8px; }
 .mobile-nav-link, .mobile-nav-action {
