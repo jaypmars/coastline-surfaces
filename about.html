@@ -106,15 +106,29 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 .contact-actions { display:flex; justify-content:center; gap:12px; flex-wrap:wrap; margin-top:8px; }
 .site-footer { text-align:center; padding:18px 0 4px; color: var(--muted); font-size:16px; }
 
-.about-layout { display:grid; grid-template-columns: 1.05fr .95fr; gap:20px; }
-.about-card p { margin:0; color:var(--muted); font-size:20px; line-height:1.8; }
+.about-layout { display:grid; grid-template-columns: minmax(0,1.18fr) minmax(320px,.82fr); gap:22px; align-items:stretch; }
+.about-card { padding:34px 30px; min-height:100%; }
+.about-card p { margin:0; color:var(--muted); font-size:20px; line-height:1.82; max-width: 740px; }
 .mini-stats { display:grid; gap:14px; }
 .stat {
   background: linear-gradient(180deg, #f8f2ea 0%, #efe5d8 100%);
-  border:1px solid var(--border); border-radius:24px; padding:20px 18px;
+  border:1px solid var(--border); border-radius:24px; padding:22px 20px; min-height: 118px;
 }
-.stat strong { display:block; font-size:18px; margin-bottom:6px; }
+.stat strong { display:block; font-size:18px; margin-bottom:7px; }
 .stat span { color: var(--muted); line-height:1.6; font-size:17px; }
+.about-secondary { margin-top: 22px; }
+.about-feature-grid { display:grid; grid-template-columns: 1.05fr .95fr; gap:20px; }
+.about-feature-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.97) 0%, rgba(248,242,234,.98) 100%);
+  border:1px solid var(--border); border-radius:34px; box-shadow: var(--shadow); padding:28px 24px;
+}
+.about-feature-card h4 { margin:0 0 12px; font-size: clamp(28px, 2.5vw, 42px); line-height: 1.02; letter-spacing:-.03em; }
+.about-feature-card p { margin:0; color:var(--muted); font-size:18px; line-height:1.75; }
+.feature-pill-row { display:flex; flex-wrap:wrap; gap:12px; margin-top:20px; }
+.feature-pill {
+  display:inline-flex; align-items:center; justify-content:center; padding:12px 16px; border-radius:999px;
+  background: linear-gradient(180deg, #f8f2ea 0%, #efe5d8 100%); border:1px solid var(--border); color:var(--accent-dark); font-weight:700; font-size:15px;
+}
 
 .slider {
   position:relative; overflow:hidden; border-radius:32px; background:#eadfce; border:1px solid var(--border);
@@ -166,7 +180,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 
 @media (max-width: 980px) {
   .container { width:min(100%, calc(100% - 24px)); }
-  .project-details, .about-layout { grid-template-columns:1fr; }
+  .project-details, .about-layout, .about-feature-grid { grid-template-columns:1fr; }
   .areas-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
   .slide { height:min(70vh, 700px); }
 }
@@ -348,24 +362,47 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 </div>
 <main>
 <div class="section" style="padding-top:28px;">
-<div class="container about-layout">
+<div class="container">
+<div class="about-layout">
 <div class="about-card">
 <span class="panel-tag">About</span>
 <h3 class="section-title">About Coastline Surfaces</h3>
-<p>Coastline Surfaces specializes in lime paint, painting, decorative finishes, and high-end interior detail work. The focus is clean execution, consistent texture, sharp lines, and results that look intentional from every angle.</p>
+<p>Coastline Surfaces was built on the idea that walls and surfaces should feel as custom and elevated as the spaces around them. We specialize in bringing high-end decorative finishes to Los Angeles and beyond, including lime paint, plaster-style textures, feature walls, and gold leaf and silver leaf applications. We’ve worked with high-profile clients, celebrities, luxury interior designers, and private homeowners to turn bold ideas into beautifully finished spaces. Our goal is to create one-of-a-kind interiors that feel timeless, elegant, and environmentally conscious.</p>
 </div>
 <div class="mini-stats">
 <div class="stat">
 <strong>What we highlight</strong>
-<span>Hospitality-style interiors, stairway bullnose work, fireplaces, bathrooms, feature walls, and high-visibility finished spaces.</span>
+<span>Decorative plaster looks, lime paint, feature walls, fireplaces, bathrooms, stairway detail work, and statement surfaces that elevate the whole room.</span>
 </div>
 <div class="stat">
 <strong>How we work</strong>
-<span>Careful prep, clean job flow, and a finish that photographs well because it looks good in person.</span>
+<span>Careful prep, clean execution, sharp transitions, and finish work that reads beautifully both in person and in photos.</span>
 </div>
 <div class="stat">
 <strong>Where we go</strong>
-<span>Serving Southern California and willing to travel out of state for the right project.</span>
+<span>Serving Los Angeles and Southern California, with travel available for the right custom residential or designer-led project.</span>
+</div>
+</div>
+</div>
+<div class="about-secondary">
+<div class="about-feature-grid">
+<div class="about-feature-card">
+<span class="panel-tag">What sets us apart</span>
+<h4>Refined finish work for custom interiors.</h4>
+<p>We focus on surfaces that feel intentional from every angle, with clean lines, balanced texture, and detail work that complements the architecture around it. Whether the goal is soft movement, understated luxury, or a bold design statement, every finish is tailored to the space.</p>
+<div class="feature-pill-row">
+<span class="feature-pill">Lime Paint</span>
+<span class="feature-pill">Decorative Finishes</span>
+<span class="feature-pill">Gold Leaf</span>
+<span class="feature-pill">Silver Leaf</span>
+<span class="feature-pill">Feature Walls</span>
+</div>
+</div>
+<div class="about-feature-card">
+<span class="panel-tag">Who we work with</span>
+<h4>Trusted by design-driven clients.</h4>
+<p>Our work is shaped around collaboration with homeowners, interior designers, builders, and high-profile clients who want more than a standard paint job. Coastline Surfaces brings a calm, polished process and a luxury finish that helps turn ambitious concepts into completed spaces.</p>
+</div>
 </div>
 </div>
 </div>
