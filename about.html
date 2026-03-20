@@ -247,6 +247,51 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .desktop-nav-wrap { display:none; }
   .mobile-menu-toggle { display:flex; flex:0 0 auto; }
 }
+
+
+.navbar, main { position: relative; z-index: 1; }
+
+@media (min-width: 1380px) {
+  body::before,
+  body::after {
+    content: "";
+    position: fixed;
+    top: 72px;
+    bottom: 0;
+    width: min(33vw, 560px);
+    pointer-events: none;
+    z-index: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+  }
+
+  body::before {
+    left: 0;
+    background-image:
+      linear-gradient(90deg, rgba(244,238,230,.08) 0%, rgba(244,238,230,.04) 18%, rgba(244,238,230,.20) 48%, rgba(244,238,230,.88) 100%),
+      linear-gradient(180deg, rgba(248,243,236,.42) 0%, rgba(244,238,230,.10) 24%, rgba(244,238,230,.10) 76%, rgba(248,243,236,.42) 100%),
+      url('desktop-side-about.jpg');
+    background-position: left center;
+    border-top-right-radius: 42px;
+    border-bottom-right-radius: 42px;
+    box-shadow: inset 0 0 90px rgba(248,243,236,.22);
+  }
+
+  body::after {
+    right: 0;
+    background-image:
+      linear-gradient(270deg, rgba(244,238,230,.08) 0%, rgba(244,238,230,.04) 18%, rgba(244,238,230,.20) 48%, rgba(244,238,230,.88) 100%),
+      linear-gradient(180deg, rgba(248,243,236,.42) 0%, rgba(244,238,230,.10) 24%, rgba(244,238,230,.10) 76%, rgba(248,243,236,.42) 100%),
+      url('desktop-side-about.jpg');
+    background-position: right center;
+    border-top-left-radius: 42px;
+    border-bottom-left-radius: 42px;
+    box-shadow: inset 0 0 90px rgba(248,243,236,.22);
+    transform: scaleX(-1);
+  }
+}
+
 </style></head>
 <body>
 <div class="navbar">
