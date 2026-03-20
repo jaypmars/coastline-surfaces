@@ -307,6 +307,11 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   }
 }
 
+
+.review-entry + .review-entry { margin-top: 0; }
+.review-divider { height: 1px; background: rgba(27,22,19,0.08); margin: 26px 0; }
+.review-date { margin: 10px 0 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #9a7d59; font-weight: 700; }
+.review-quote { max-width: 1000px; }
 </style></head>
 <body>
 <div class="navbar">
@@ -367,8 +372,20 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 <div class="panel review-card">
 <span class="panel-tag">Reviews</span>
 <h3 class="section-title">Client feedback</h3>
+
+<div class="review-entry">
 <p class="review-quote">“We hired Jay to paint two bedrooms and our stairwell, and we couldn’t be happier with the results. His lines are incredibly precise, and the finished work looks completely professional. He was easy to work with from start to finish, showed up when he said he would, and wrapped up the job on time. The pricing was fair and transparent with no surprises. We’d hire him again without hesitation and would recommend him to anyone looking for a painter who takes real pride in his work.”</p>
 <p class="review-author">— Slava Yanson &amp; Nancy Coblenz</p>
+<p class="review-date">February 2026</p>
+</div>
+
+<div class="review-divider"></div>
+
+<div class="review-entry">
+<p class="review-quote">“I had a great experience with Coastline Surfaces. Their attention to detail and quality of work truly stands out. The finishes are elegant, clean, and give the space a high-end, custom look. They were professional, reliable, and easy to communicate with throughout the entire process. You can tell they really care about their craft and delivering beautiful results. Highly recommend if you’re looking to elevate your interior with unique, refined finishes!”</p>
+<p class="review-author">— @Aida_Realtor_LA</p>
+<p class="review-date">March 2026</p>
+</div>
 </div>
 </div>
 </section>
