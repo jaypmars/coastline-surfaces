@@ -341,7 +341,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 <a class="mobile-nav-action dark" href="tel:18186530451">Call</a>
 </div>
 </div>
-</div><main><section class="section" style="padding-top:28px;"><div class="container estimate-grid"><div class="estimate-form-card"><span class="panel-tag">Request estimate</span><h2>Tell us about your project</h2><p>Use this form if you’d rather not call or email first. Submit the basics and Coastline Surfaces can follow up with you directly.</p><form action="mailto:coastlinesurfacesla@gmail.com?subject=Coastline%20Surfaces%20Estimate&amp;body=Hi%20Coastline%20Surfaces%2C%0A%0AI%20would%20like%20a%20free%20estimate%20for%20my%20project.%0A%0AName%3A%0APhone%3A%0ALocation%3A%0AProject%20details%3A%0A" method="get"><div class="form-grid"><div class="field"><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" type="text"/></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" placeholder="Best number to reach you" type="tel"/></div><div class="field"><label for="emailField">Email</label><input id="emailField" name="email" placeholder="Your email" type="email"/></div><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Project city" type="text"/></div><div class="field full"><label for="projectType">Project type</label><select id="projectType" name="project_type"><option>Lime Paint</option><option>Interior Painting</option><option>Decorative Finish</option><option>Patch / Prep</option><option>Other</option><option>Not sure yet</option></select></div><div class="field full"><label for="details">Project details</label><textarea id="details" name="details" placeholder="Tell us about the room, finish, timing, and anything else that helps."></textarea></div></div><div class="form-note">This version opens an email draft with the information ready to send. For true saved submissions and photo uploads, the next step would be connecting a form service.</div><div class="submit-row"><button class="btn btn-primary" style="min-width:220px;" type="submit">Send Estimate Request</button><a class="btn btn-secondary" href="tel:18186530451">Call instead</a></div></form></div><div class="form-side-card"><span class="panel-tag">What to expect</span><h3>Simple and fast</h3><p>Keep it short. Once you send the request, Coastline Surfaces can follow up to learn more, review timing, and talk through the finish you want.</p><div class="check-list"><div class="check-item"><span>✓</span><span>Lime paint and decorative finish projects</span></div><div class="check-item"><span>✓</span><span>Interior painting and detail work</span></div><div class="check-item"><span>✓</span><span>Prep, patching, and premium presentation</span></div><div class="check-item"><span>✓</span><span>Southern California and select travel projects</span></div></div></div></div></section></main><script>
+</div><main><section class="section" style="padding-top:28px;"><div class="container estimate-grid"><div class="estimate-form-card"><span class="panel-tag">Request estimate</span><h2>Tell us about your project</h2><p>Use this form if you’d rather not call or email first. Submit the basics and Coastline Surfaces can follow up with you directly.</p><form id="estimateForm"><div class="form-grid"><div class="field"><label for="name">Full name</label><input id="name" name="name" placeholder="Your name" required="" type="text"/></div><div class="field"><label for="phone">Phone</label><input id="phone" name="phone" placeholder="Best number to reach you" required="" type="tel"/></div><div class="field"><label for="emailField">Email</label><input id="emailField" name="email" placeholder="Your email" required="" type="email"/></div><div class="field"><label for="city">City</label><input id="city" name="city" placeholder="Project city" type="text"/></div><div class="field full"><label for="projectType">Project type</label><select id="projectType" name="project_type"><option>Lime Paint</option><option>Interior Painting</option><option>Decorative Finish</option><option>Patch / Prep</option><option>Other</option><option>Not sure yet</option></select></div><div class="field full"><label for="details">Project details</label><textarea id="details" name="details" placeholder="Tell us about the room, finish, timing, and anything else that helps." required=""></textarea></div></div><div class="form-note">This version opens your email app with the request already filled out. If nothing opens, use the email button below instead.</div><div class="submit-row"><button class="btn btn-primary" style="min-width:220px;" type="submit">Send Estimate Request</button><a class="btn btn-secondary" href="mailto:coastlinesurfacesla@gmail.com?subject=Coastline%20Surfaces%20Estimate">Email instead</a><a class="btn btn-secondary" href="tel:18186530451">Call instead</a></div><p aria-live="polite" class="form-note" id="estimateStatus" style="display:none;margin-top:12px;"></p></form></div><div class="form-side-card"><span class="panel-tag">What to expect</span><h3>Simple and fast</h3><p>Keep it short. Once you send the request, Coastline Surfaces can follow up to learn more, review timing, and talk through the finish you want.</p><div class="check-list"><div class="check-item"><span>✓</span><span>Lime paint and decorative finish projects</span></div><div class="check-item"><span>✓</span><span>Interior painting and detail work</span></div><div class="check-item"><span>✓</span><span>Prep, patching, and premium presentation</span></div><div class="check-item"><span>✓</span><span>Southern California and select travel projects</span></div></div></div></div></section></main><script>
 function openMobileMenu() {
   document.getElementById('mobileDrawer').classList.add('open');
   document.body.style.overflow = 'hidden';
@@ -350,4 +350,52 @@ function closeMobileMenu() {
   document.getElementById('mobileDrawer').classList.remove('open');
   document.body.style.overflow = '';
 }
+
+(function () {
+  const form = document.getElementById('estimateForm');
+  const status = document.getElementById('estimateStatus');
+  if (!form) return;
+
+  form.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    if (!form.reportValidity()) {
+      return;
+    }
+
+    const name = document.getElementById('name').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const email = document.getElementById('emailField').value.trim();
+    const city = document.getElementById('city').value.trim();
+    const projectType = document.getElementById('projectType').value;
+    const details = document.getElementById('details').value.trim();
+
+    const subject = 'Coastline Surfaces Estimate Request';
+    const body = [
+      'Hi Coastline Surfaces,',
+      '',
+      'I would like a free estimate for my project.',
+      '',
+      'Full name: ' + name,
+      'Phone: ' + phone,
+      'Email: ' + email,
+      'City: ' + (city || 'Not provided'),
+      'Project type: ' + projectType,
+      'Project details:',
+      details
+    ].join('
+');
+
+    const mailtoUrl = 'mailto:coastlinesurfacesla@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+
+    status.style.display = 'block';
+    status.textContent = 'Opening your email app...';
+
+    window.location.href = mailtoUrl;
+
+    setTimeout(function () {
+      status.textContent = 'If your email app did not open, tap "Email instead" or call directly.';
+    }, 900);
+  });
+})();
 </script></body></html>
