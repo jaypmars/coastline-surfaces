@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <html lang="en">
-<head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link rel="icon" href="/favicon.ico" sizes="any"/><link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png"/><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"/><link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png"/><link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png"/><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"/><link rel="manifest" href="/site.webmanifest"/><meta name="theme-color" content="#f4efe8"/><title>Coastline Surfaces - Home</title><style>
+<head><link href="favicon-32.png" rel="icon" sizes="32x32" type="image/png"/><link href="favicon-16.png" rel="icon" sizes="16x16" type="image/png"/><link href="favicon.ico" rel="icon"/><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Coastline Surfaces - Home</title><style>
 :root {
   --bg2: #efe5d8;
   --card: rgba(252,250,247,.97);
@@ -71,6 +71,7 @@ button { font-family: inherit; }
 }
 .hero h2 { margin:10px 0 12px; font-size: clamp(34px, 4.5vw, 72px); line-height:.94; letter-spacing:-.04em; font-weight:700; max-width:980px; }
 .hero p.lead { margin:0; max-width:900px; font-size: clamp(18px, 1.7vw, 24px); line-height:1.6; color: var(--muted); }
+.hero-trust-line { margin:16px 0 0; max-width:860px; font-size:16px; line-height:1.7; color: var(--accent-dark); font-weight:700; letter-spacing:.02em; }
 .hero-actions { display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
 
 .btn {
@@ -197,6 +198,9 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .areas-grid { grid-template-columns:1fr; }
   .area { font-size:17px; }
   .project-copy, .about-card p, .contact-card p { font-size:18px; }
+  .hero-trust-line { font-size:15px; }
+  .review-panel-inner { grid-template-columns:1fr; }
+  .review-actions { justify-content:flex-start; }
   .slide { height:min(64vh, 540px); padding:8px; }
 }
 
@@ -252,6 +256,23 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 .bottom-service-areas { margin-top:24px; }
 .bottom-service-areas .areas-card { max-width:100%; }
 .review-section .panel { max-width:100%; }
+.review-panel { padding:30px 26px; }
+.review-panel-inner { display:grid; grid-template-columns: minmax(0,1.15fr) auto; gap:22px; align-items:end; }
+.review-panel .section-title { margin-bottom:14px; }
+.review-quote { margin:0; max-width:920px; font-size:clamp(22px,2vw,30px); line-height:1.6; color:var(--text); }
+.review-meta { margin-top:16px; display:flex; flex-wrap:wrap; gap:12px 18px; align-items:center; color:var(--muted); font-size:16px; }
+.review-author { margin:0; font-weight:700; color:var(--accent-dark); }
+.review-date { display:inline-flex; align-items:center; padding:8px 12px; border-radius:999px; background:#f8f2ea; border:1px solid var(--border); font-weight:700; color:var(--accent); }
+.review-actions { display:flex; gap:12px; flex-wrap:wrap; justify-content:flex-end; }
+.compact-contact { text-align:center; }
+.compact-contact h3 { margin:0 0 10px; font-size:clamp(28px,3.2vw,46px); line-height:1; letter-spacing:-.03em; }
+.compact-contact p { margin:0 auto 18px; max-width:760px; font-size:18px; line-height:1.65; color:var(--muted); }
+.compact-contact .contact-actions { margin-top:0; }
+.bottom-service-areas .areas-card { padding:24px 20px; }
+.bottom-service-areas .section-title { font-size:clamp(28px,3vw,44px); margin-bottom:8px; }
+.bottom-service-areas .section-copy { font-size:18px; max-width:none; }
+.bottom-service-areas .areas-grid { gap:12px; margin-top:16px; }
+.bottom-service-areas .area { padding:18px 14px; font-size:16px; border-radius:20px; }
 
 .navbar, main { position: relative; z-index: 1; }
 
@@ -296,7 +317,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   }
 }
 
-</style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Coastline Surfaces","url":"https://www.coastlinesurfacesco.com/","logo":"https://www.coastlinesurfacesco.com/favicon-192.png"}</script></head>
+</style></head>
 <body>
 <div class="navbar">
 <div class="container navbar-inner">
@@ -360,6 +381,7 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 </div>
 <h2>Beautiful surfaces, clean detail, and work that feels custom.</h2>
 <p class="lead">Coastline Surfaces specializes in lime paint, painting, decorative finishes, and careful interior detail work for projects that need a polished look.</p>
+<p class="hero-trust-line">Decorative finishes, lime paint, plaster textures, gold leaf, silver leaf, and detail-driven interiors across Los Angeles and surrounding areas.</p>
 <div class="hero-actions">
 <a class="btn btn-primary" href="tel:18186530451">Tap to Call</a>
 <a class="btn btn-secondary" href="mailto:coastlinesurfacesla@gmail.com?subject=Coastline%20Surfaces%20Estimate&amp;body=Hi%20Coastline%20Surfaces%2C%0A%0AI%20would%20like%20a%20free%20estimate%20for%20my%20project.%0A%0AName%3A%0APhone%3A%0ALocation%3A%0AProject%20details%3A%0A">Email Us</a>
@@ -372,17 +394,25 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 
 <section class="section review-section">
 <div class="container">
-<div class="panel">
+<div class="panel review-panel">
+<div class="review-panel-inner">
+<div>
 <span class="panel-tag">Client review</span>
 <h3 class="section-title">What clients are saying</h3>
 <p class="review-quote">“His lines are incredibly precise, and the finished work looks completely professional… We’d hire him again without hesitation.”</p>
+<div class="review-meta">
 <p class="review-author">— Slava Yanson &amp; Nancy Coblenz</p>
-<div style="margin-top:16px;">
+<span class="review-date">February 2026</span>
+</div>
+</div>
+<div class="review-actions">
 <a class="btn btn-tertiary" href="reviews.html">View Full Review</a>
+<a class="btn btn-secondary" href="https://share.google/Wsn9mcywiqXIfVFAO" rel="noopener noreferrer" target="_blank">Leave a Google Review</a>
 </div>
 </div>
 </div>
-</section><section class="contact-wrap">
+</div>
+</section></section><section class="contact-wrap">
 <div class="container">
 <div class="panel" style="padding:20px;">
 <div class="cta-photo-card">
@@ -396,14 +426,13 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
 </div>
 </div>
 </div>
-<div class="contact-card">
-<span class="panel-tag">Get a free estimate</span>
-<h3>Call, email, or request an estimate</h3>
-<p>Reach out for lime paint, painting, decorative finishes, interior detail work, and custom projects.</p>
+<div class="contact-card compact-contact">
+<span class="panel-tag">Get in touch</span>
+<h3>Call or email to get started</h3>
+<p>If you already know your project details, use the estimate page above. If you prefer a faster first step, call or email directly and we’ll follow up with you.</p>
 <div class="contact-actions">
 <a class="btn btn-primary" href="tel:18186530451">Call (818) 653-0451</a>
-<a class="btn btn-secondary" href="mailto:coastlinesurfacesla@gmail.com?subject=Coastline%20Surfaces%20Estimate&amp;body=Hi%20Coastline%20Surfaces%2C%0A%0AI%20would%20like%20a%20free%20estimate%20for%20my%20project.%0A%0AName%3A%0APhone%3A%0ALocation%3A%0AProject%20details%3A%0A">coastlinesurfacesla@gmail.com</a>
-<a class="btn btn-tertiary" href="estimate.html">Request Estimate</a>
+<a class="btn btn-secondary" href="mailto:coastlinesurfacesla@gmail.com?subject=Coastline%20Surfaces%20Estimate&amp;body=Hi%20Coastline%20Surfaces%2C%0A%0AI%20would%20like%20a%20free%20estimate%20for%20my%20project.%0A%0AName%3A%0APhone%3A%0ALocation%3A%0AProject%20details%3A%0A">Email Us</a>
 </div>
 </div>
 <div class="bottom-service-areas"><div class="areas-card">
