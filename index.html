@@ -199,8 +199,16 @@ p.section-copy { margin:0; color: var(--muted); font-size: clamp(18px, 1.6vw, 22
   .area { font-size:17px; }
   .project-copy, .about-card p, .contact-card p { font-size:18px; }
   .hero-trust-line { font-size:15px; }
-  .review-panel-inner { grid-template-columns:1fr; }
-  .review-actions { justify-content:flex-start; }
+  .review-panel { padding:22px 16px; }
+  .review-panel-inner { grid-template-columns:1fr; gap:16px; align-items:start; }
+  .review-panel-inner > div { min-width:0; }
+  .review-panel .section-title { font-size:clamp(36px, 13vw, 56px); line-height:.96; margin-bottom:14px; }
+  .review-quote { max-width:none; font-size:clamp(20px, 6vw, 28px); line-height:1.45; white-space:normal; overflow-wrap:normal; word-break:normal; }
+  .review-meta { gap:10px 14px; }
+  .review-author { font-size:16px; }
+  .review-date { font-size:14px; padding:7px 10px; }
+  .review-actions { justify-content:flex-start; width:100%; }
+  .review-actions .btn { width:100%; }
   .slide { height:min(64vh, 540px); padding:8px; }
 }
 
